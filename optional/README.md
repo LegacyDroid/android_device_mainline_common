@@ -17,7 +17,7 @@
 | Value | Directory | Description |
 |-------|-----------|-------------|
 | common-handheld-7.0 | audio-policy_common-handheld-7.0 | For common handheld devices. Requires the target to provide `primary_audio_policy_configuration.xml`. |
-| goldfish | audio-policy_goldfish | Used with `TARGET_AUDIO_HAL=default-aidl` |
+| cuttlefish | audio-policy_cuttlefish | Used with `TARGET_AUDIO_HAL=default-aidl` |
 
 #### TARGET_PROVIDES_AUDIO_POLICY_VOLUMES
 | Value | Description |

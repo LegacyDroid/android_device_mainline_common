@@ -37,7 +37,7 @@ endif
 TARGET_AUDIO_HAL ?= default-aidl
 
 ifeq ($(TARGET_AUDIO_HAL),default-aidl)
-TARGET_AUDIO_POLICY ?= goldfish
+TARGET_AUDIO_POLICY ?= cuttlefish
 else
 TARGET_AUDIO_POLICY ?= common-handheld-7.0
 TARGET_PROVIDES_AUDIO_POLICY_VOLUMES ?= false

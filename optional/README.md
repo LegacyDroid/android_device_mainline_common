@@ -72,3 +72,8 @@
 | Value | Directory | Description |
 |-------|-----------|-------------|
 | mainline | usb-gadget-hal_mainline | |
+
+### TARGET_USB_INIT_SCRIPT
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| mainline | usb-init-script_mainline | |

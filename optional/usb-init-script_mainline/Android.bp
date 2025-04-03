@@ -1,0 +1,12 @@
+prebuilt_etc {
+    name: "init.common.usb.rc",
+    src: "init.common.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+sh_binary {
+    name: "set_udc.sh",
+    src: "set_udc.sh",
+    vendor: true,
+}

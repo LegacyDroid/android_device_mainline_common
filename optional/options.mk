@@ -49,6 +49,7 @@ TARGET_SUPPORTS_SUSPEND ?= true
 
 # USB
 ifneq ($(TARGET_SUPPORTS_USB_ACCESSORY_MODE),false)
+PRODUCT_PACKAGES += android.hardware.usb.accessory.prebuilt.xml
 TARGET_USB_GADGET_HAL ?= mainline
 TARGET_USB_HAL ?= lineage-basic
 TARGET_USB_INIT_SCRIPT ?= mainline

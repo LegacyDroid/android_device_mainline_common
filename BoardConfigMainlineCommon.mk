@@ -36,6 +36,9 @@ BOARD_EROFS_BLOCKSIZE := 16384
 BOARD_F2FS_BLOCKSIZE := 16384
 endif
 
+# Init
+TARGET_INIT_VENDOR_LIB ?= //$(MAINLINE_COMMON_PATH):init_xiaomi_kona
+
 # Properties
 TARGET_PRODUCT_PROP += $(MAINLINE_COMMON_PATH)/properties/product.prop
 TARGET_SYSTEM_EXT_PROP += $(MAINLINE_COMMON_PATH)/properties/system_ext.prop

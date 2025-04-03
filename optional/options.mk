@@ -46,3 +46,8 @@ TARGET_LIGHT_HAL ?= lineage
 # Power
 TARGET_POWER_HAL ?= default-aidl
 TARGET_SUPPORTS_SUSPEND ?= true
+
+# USB
+ifneq ($(TARGET_SUPPORTS_USB_ACCESSORY_MODE),false)
+TARGET_USB_HAL ?= lineage-basic
+endif

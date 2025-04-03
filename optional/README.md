@@ -58,3 +58,12 @@
 | Value | Directory | Description |
 |-------|-----------|-------------|
 | false | suspend_blocker | Disables suspend |
+
+## USB
+
+### TARGET_USB_HAL
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| lineage-basic | usb-hal_lineage | |
+| lineage-dual_role_usb | usb-hal_lineage | |
+| lineage-typec | usb-hal_lineage | |

@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-import /vendor/etc/init/hw/init.common.usb.rc
+import /vendor/etc/init/hw/init.mainline.usb.rc
 
 # DLKM Loader
 service vendor.dlkm_loader /vendor/bin/dlkm_loader

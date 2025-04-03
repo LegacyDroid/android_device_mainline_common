@@ -6,7 +6,7 @@
 ifeq ($(TARGET_USB_INIT_SCRIPT),mainline)
 
 PRODUCT_PACKAGES += \
-    init.common.usb.rc \
+    init.mainline.usb.rc \
     set_udc.sh
 
 endif # TARGET_USB_INIT_SCRIPT

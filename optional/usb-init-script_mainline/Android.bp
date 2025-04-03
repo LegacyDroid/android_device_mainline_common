@@ -1,6 +1,6 @@
 prebuilt_etc {
-    name: "init.common.usb.rc",
-    src: "init.common.usb.rc",
+    name: "init.mainline.usb.rc",
+    src: "init.mainline.usb.rc",
     sub_dir: "init/hw",
     vendor: true,
 }

@@ -1,0 +1,5 @@
+# DeviceTree
+r_dir_file(init, vendor_sysfs_dt_model)
+
+# DMI
+r_dir_file(init, vendor_sysfs_dmi_id)

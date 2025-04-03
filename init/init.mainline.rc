@@ -3,6 +3,17 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# DLKM Loader
+service vendor.dlkm_loader /vendor/bin/dlkm_loader
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on early-init
+    start vendor.dlkm_loader
+
 # Wi-Fi
 on early-boot
     mkdir /data/vendor/wifi 0770 wifi wifi

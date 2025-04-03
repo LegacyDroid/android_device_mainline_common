@@ -8,6 +8,10 @@ MAINLINE_COMMON_PATH := device/mainline/common
 # Include the fragments
 include $(MAINLINE_COMMON_PATH)/optional/*/product.mk
 
+# DLKM Loader
+PRODUCT_PACKAGES += \
+    dlkm_loader
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd

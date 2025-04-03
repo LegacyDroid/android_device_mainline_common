@@ -49,5 +49,6 @@ TARGET_SUPPORTS_SUSPEND ?= true
 
 # USB
 ifneq ($(TARGET_SUPPORTS_USB_ACCESSORY_MODE),false)
+TARGET_USB_GADGET_HAL ?= mainline
 TARGET_USB_HAL ?= lineage-basic
 endif

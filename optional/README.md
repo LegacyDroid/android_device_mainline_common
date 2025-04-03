@@ -67,3 +67,8 @@
 | lineage-basic | usb-hal_lineage | |
 | lineage-dual_role_usb | usb-hal_lineage | |
 | lineage-typec | usb-hal_lineage | |
+
+### TARGET_USB_GADGET_HAL
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| mainline | usb-gadget-hal_mainline | |

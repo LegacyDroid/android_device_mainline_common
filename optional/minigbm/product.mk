@@ -1,0 +1,39 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+ifeq ($(TARGET_GRAPHICS_ALLOCATOR_HAL),minigbm)
+
+ifeq ($(TARGET_MINIGBM_PLATFORM),)
+LOCAL_MINIGBM_MODULE_SUFFIX :=
+TARGET_MINIGBM_PLATFORM := generic
+else
+LOCAL_MINIGBM_MODULE_SUFFIX := _$(TARGET_MINIGBM_PLATFORM)
+endif
+
+PRODUCT_PACKAGES += \
+    gralloc.minigbm$(LOCAL_MINIGBM_MODULE_SUFFIX)
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.gralloc=minigbm$(LOCAL_MINIGBM_MODULE_SUFFIX)
+
+TARGET_MINIGBM_HAL_INTERFACE ?= aidl
+ifeq ($(TARGET_MINIGBM_HAL_INTERFACE),aidl)
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator-service.minigbm \
+    mapper.minigbm
+ifneq ($(TARGET_MINIGBM_PLATFORM),generic)
+$(error minigbm AIDL does not support platforms other than generic yet)
+endif
+else ifeq ($(TARGET_MINIGBM_HAL_INTERFACE),hidl)
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@4.0-service.minigbm$(LOCAL_MINIGBM_MODULE_SUFFIX) \
+    android.hardware.graphics.mapper@4.0-impl.minigbm$(LOCAL_MINIGBM_MODULE_SUFFIX)
+else ifeq ($(TARGET_MINIGBM_HAL_INTERFACE),libhardware)
+$(error Not implemented yet)
+else
+$(error Not supported)
+endif
+
+endif # TARGET_GRAPHICS_ALLOCATOR_HAL

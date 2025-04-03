@@ -1,0 +1,5 @@
+vintf_fragment {
+    name: "manifest_mainline_common_graphics-composer-hal_drm_hwcomposer_libhardware.xml",
+    src: "manifest_mainline_common_graphics-composer-hal_drm_hwcomposer_libhardware.xml",
+    vendor: true,
+}

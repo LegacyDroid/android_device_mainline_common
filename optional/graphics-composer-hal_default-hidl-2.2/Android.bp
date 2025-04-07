@@ -1,0 +1,5 @@
+vintf_fragment {
+    name: "manifest_mainline_common_graphics-composer-hal_default-hidl-2.2.xml",
+    src: "manifest_mainline_common_graphics-composer-hal_default-hidl-2.2.xml",
+    vendor: true,
+}

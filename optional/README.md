@@ -36,7 +36,7 @@
 ### TARGET_GRAPHICS_COMPOSER_HAL
 | Value | Directory | Description |
 |-------|-----------|-------------|
-| default-hidl-2.1 | graphics-composer-hal_default-hidl-2.1 | Supports framebuffer display |
+| default-hidl-2.2 | graphics-composer-hal_default-hidl-2.2 | Supports framebuffer display |
 | drm_hwcomposer | drm_hwcomposer | Generic DRM HWComposer |
 
 ### TARGET_MEMTRACK_HAL

@@ -13,6 +13,18 @@
 | mesa | mesa | Typically for targets that supports 3D acceleration |
 | swiftshader | swiftshader | For targets without 3D acceleration |
 
+### TARGET_GRAPHICS_EGL
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| angle | angle | An EGL implementation that uses the Vulkan HAL to provide OpenGL ES |
+| mesa | mesa | Typically for targets that supports 3D acceleration |
+
+### TARGET_GRAPHICS_VULKAN
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| mesa | mesa | Typically for targets that supports Vulkan acceleration |
+| swiftshader | swiftshader | For targets without Vulkan support |
+
 ## Graphics HALs
 
 ### TARGET_GRAPHICS_ALLOCATOR_HAL

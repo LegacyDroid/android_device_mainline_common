@@ -28,6 +28,14 @@ TARGET_AUDIO_HAL ?= default-aidl
 # Graphics
 TARGET_GRAPHICS ?= mesa
 
+ifeq ($(TARGET_GRAPHICS),mesa)
+TARGET_GRAPHICS_EGL ?= mesa
+TARGET_GRAPHICS_VULKAN ?= mesa
+else ifeq ($(TARGET_GRAPHICS),swiftshader)
+TARGET_GRAPHICS_EGL ?= angle
+TARGET_GRAPHICS_VULKAN ?= swiftshader
+endif
+
 # Graphics HALs
 TARGET_GRAPHICS_ALLOCATOR_HAL ?= minigbm
 TARGET_GRAPHICS_COMPOSER_HAL ?= drm_hwcomposer

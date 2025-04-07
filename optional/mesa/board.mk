@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-ifeq ($(TARGET_GRAPHICS),mesa)
+ifneq ($(filter mesa,$(TARGET_GRAPHICS_EGL) $(TARGET_GRAPHICS_VULKAN)),)
 
 BOARD_MESA3D_USES_MESON_BUILD := true
 
@@ -28,4 +28,4 @@ BOARD_MESA3D_GALLIUM_DRIVERS += llvmpipe softpipe
 BOARD_MESA3D_VULKAN_DRIVERS += swrast
 endif
 
-endif
+endif # TARGET_GRAPHICS_EGL || TARGET_GRAPHICS_VULKAN

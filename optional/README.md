@@ -72,6 +72,18 @@
 |-------|-----------|-------------|
 | false | suspend_blocker | Disables suspend |
 
+## Security
+
+### TARGET_GATEKEEPER_HAL
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| software-aidl | gatekeeper-hal_software-aidl | |
+
+### TARGET_SECURITY_KEYMINT_HAL
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| default | keymint-hal_default | |
+
 ## USB
 
 ### TARGET_USB_HAL

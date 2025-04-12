@@ -55,6 +55,12 @@ TARGET_LIGHT_HAL ?= lineage
 TARGET_POWER_HAL ?= default-aidl
 TARGET_SUPPORTS_SUSPEND ?= true
 
+# Security
+ifneq ($(TARGET_SUPPORTS_HARDWARE_BACKED_SECURITY),true)
+TARGET_GATEKEEPER_HAL ?= software-aidl
+TARGET_SECURITY_KEYMINT_HAL ?= default
+endif
+
 # USB
 ifneq ($(TARGET_SUPPORTS_USB_ACCESSORY_MODE),false)
 PRODUCT_PACKAGES += android.hardware.usb.accessory.prebuilt.xml

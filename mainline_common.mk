@@ -19,18 +19,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    com.android.hardware.gatekeeper.nonsecure
-
 # Init
 PRODUCT_COPY_FILES += \
     $(MAINLINE_COMMON_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     $(call find-copy-subdir-files,init.mainline.*,$(MAINLINE_COMMON_PATH)/init/,$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/)
-
-# Keymint
-PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-service
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *

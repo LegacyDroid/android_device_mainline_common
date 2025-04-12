@@ -31,6 +31,7 @@
 | Value | Directory | Description |
 |-------|-----------|-------------|
 | default-hidl-2.0 | graphics-allocator-hal_default-hidl-2.0 | Supports framebuffer display |
+| gbm | gbm_gralloc | Android gralloc module using libgbm API from Mesa |
 | minigbm | minigbm | May require additional build flags |
 
 ### TARGET_GRAPHICS_COMPOSER_HAL

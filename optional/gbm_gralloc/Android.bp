@@ -1,0 +1,5 @@
+vintf_fragment {
+    name: "manifest_mainline_common_gbm_gralloc.xml",
+    src: "manifest_mainline_common_gbm_gralloc.xml",
+    vendor: true,
+}

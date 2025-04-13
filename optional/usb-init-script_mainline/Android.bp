@@ -4,9 +4,3 @@ prebuilt_etc {
     sub_dir: "init/hw",
     vendor: true,
 }
-
-sh_binary {
-    name: "set_udc.sh",
-    src: "set_udc.sh",
-    vendor: true,
-}

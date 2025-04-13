@@ -1,3 +1,2 @@
 type vendor_sysfs_dt_model, fs_type, sysfs_type;
 type vendor_sysfs_dmi_id, fs_type, sysfs_type;
-type vendor_sysfs_udc, fs_type, sysfs_type;

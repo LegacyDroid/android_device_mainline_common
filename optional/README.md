@@ -73,6 +73,7 @@
 | Value | Directory | Description |
 |-------|-----------|-------------|
 | default-aidl | power-hal_default-aidl | |
+| perfmgr-lineage | power-hal_perfmgr-lineage | Lineage perfmgr hal, requires device to provide powerhint.json file as module with the filename being module name. |
 
 ### TARGET_SUPPORTS_SUSPEND
 | Value | Directory | Description |

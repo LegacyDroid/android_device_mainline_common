@@ -1,3 +1,10 @@
+## A/B
+
+### TARGET_USES_MAINLINE_COMMON_AB_DEFS
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| true | ab | Enable A/B definitions from mainline/common |
+
 ## Audio
 
 ### TARGET_AUDIO_HAL

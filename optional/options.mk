@@ -22,6 +22,11 @@ endif
 
 ##### Components #####
 
+# A/B
+ifeq ($(AB_OTA_UPDATER),true)
+TARGET_USES_MAINLINE_COMMON_AB_DEFS ?= true
+endif
+
 # Audio
 TARGET_AUDIO_HAL ?= default-aidl
 

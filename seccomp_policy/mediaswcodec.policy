@@ -1,0 +1,2 @@
+mkdirat: 1
+sched_getaffinity: 1

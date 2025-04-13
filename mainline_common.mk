@@ -49,6 +49,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.recovery.batteryless=true
 endif
 
+# Seccomp policy
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*.policy,$(MAINLINE_COMMON_PATH)/seccomp_policy/,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/)
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(MAINLINE_COMMON_PATH) \

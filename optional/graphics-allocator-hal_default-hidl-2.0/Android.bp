@@ -1,3 +1,8 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
 vintf_fragment {
     name: "manifest_mainline_common_graphics-allocator-hal_default-hidl-2.0.xml",
     src: "manifest_mainline_common_graphics-allocator-hal_default-hidl-2.0.xml",

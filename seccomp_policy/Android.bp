@@ -1,0 +1,12 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "mediaswcodec.policy.vendor",
+    src: "mediaswcodec.policy",
+    filename_from_src: true,
+    sub_dir: "seccomp_policy",
+    vendor: true,
+}

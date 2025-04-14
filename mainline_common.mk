@@ -24,9 +24,9 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Init
-PRODUCT_COPY_FILES += \
-    $(MAINLINE_COMMON_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
-    $(call find-copy-subdir-files,init.mainline.*,$(MAINLINE_COMMON_PATH)/init/,$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/)
+PRODUCT_PACKAGES += \
+    init.mainline.rc \
+    ueventd.mainline.rc
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -44,9 +44,11 @@ PRODUCT_PACKAGES += \
     android.software.ipsec_tunnels.prebuilt.xml
 
 # Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.mainline.rc
+
 PRODUCT_COPY_FILES += \
-    $(MAINLINE_COMMON_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/etc/ueventd.rc \
-    $(call find-copy-subdir-files,init.recovery.mainline.*,$(MAINLINE_COMMON_PATH)/init/,$(TARGET_COPY_OUT_RECOVERY)/root/)
+    $(MAINLINE_COMMON_PATH)/init/ueventd.rc:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/etc/ueventd.rc
 
 ifeq ($(TARGET_HAS_BATTERY),false)
 PRODUCT_VENDOR_PROPERTIES += \
@@ -54,8 +56,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 endif
 
 # Seccomp policy
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.policy,$(MAINLINE_COMMON_PATH)/seccomp_policy/,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/)
+PRODUCT_PACKAGES += \
+    mediaswcodec.policy.vendor
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

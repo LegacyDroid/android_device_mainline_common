@@ -1,0 +1,25 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "init.mainline.rc",
+    src: "init.mainline.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.mainline.rc",
+    src: "init.recovery.mainline.rc",
+    sub_dir: "init",
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.mainline.rc",
+    src: "ueventd.rc",
+    filename: "ueventd.rc",
+    vendor: true,
+}

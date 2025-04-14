@@ -15,6 +15,10 @@ include $(MAINLINE_COMMON_PATH)/optional/*/product.mk
 PRODUCT_PACKAGES += \
     dlkm_loader
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@latest-service.clearkey
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd

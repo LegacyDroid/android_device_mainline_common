@@ -1,6 +1,9 @@
 # Charger
 ro.enable_boot_charger_mode=1
 
+# DRM
+drm.service.enabled=true
+
 # Incremental FS
 ro.incremental.enable=1
 

@@ -5,9 +5,6 @@
 
 MAINLINE_COMMON_PATH := device/mainline/common
 
-# Inherit from external repos
-$(call inherit-product, external/linux-firmware-mainline/linux-firmware-mainline.mk)
-
 # Include the fragments
 include $(MAINLINE_COMMON_PATH)/optional/*/product.mk
 
@@ -62,6 +59,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(MAINLINE_COMMON_PATH) \
+    external/linux-firmware-mainline \
     hardware/mainline
 
 # UFFD GC

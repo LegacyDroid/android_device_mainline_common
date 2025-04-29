@@ -25,6 +25,8 @@ PRODUCT_PACKAGES += \
     init.mainline.rc \
     ueventd.mainline.rc
 
+$(call soong_config_set,libinit,vendor_init_lib,//$(MAINLINE_COMMON_PATH):init_mainline_common)
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 

@@ -28,8 +28,4 @@ apex {
         any @ prebuilts: prebuilts,
         default: [],
     }),
-    vintf_fragment_modules: [
-        "android.hardware.wifi.hostapd.xml",
-        "android.hardware.wifi.supplicant.xml",
-    ],
 }

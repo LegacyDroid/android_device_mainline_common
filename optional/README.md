@@ -60,6 +60,19 @@
 | cuttlefish | health-hal_cuttlefish | For devices without battery |
 | default-aidl | health-hal_default-aidl | For devices with a battery accessible through /sys/class/power_supply |
 
+## Kernel
+
+### TARGET_PREBUILT_KERNEL
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| * | prebuilt_kernel | Path to the prebuilt kernel image |
+
+### TARGET_KERNEL_MIXED_MODE
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| true | prebuilt_kernel | Kernel was built in gki mixed mode |
+| false | prebuilt_kernel | Kernel was not built in gki mixed mode, requiring module signature workarounds |
+
 ## Light
 
 ### TARGET_LIGHT_HAL

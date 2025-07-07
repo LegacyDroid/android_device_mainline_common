@@ -6,6 +6,6 @@
 ifeq ($(TARGET_USB_GADGET_HAL),mainline)
 
 PRODUCT_PACKAGES += \
-    android.hardware.usb.gadget-service.mainline
+    com.android.hardware.usb.gadget.mainline
 
 endif # TARGET_USB_GADGET_HAL

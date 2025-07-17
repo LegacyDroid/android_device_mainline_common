@@ -1,5 +1,5 @@
 {
-    "name": "org.lineageos.device.mainline.common.graphics.vulkan.swiftshader",
+    "name": "org.lineageos.device.graphics.vulkan.swiftshader",
     "bootstrap": true,
     "version": 1
 }

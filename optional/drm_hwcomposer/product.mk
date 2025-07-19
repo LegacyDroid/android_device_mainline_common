@@ -7,8 +7,13 @@ ifeq ($(TARGET_GRAPHICS_COMPOSER_HAL),drm_hwcomposer)
 
 TARGET_DRM_HWCOMPOSER_HAL_INTERFACE ?= aidl
 ifeq ($(TARGET_DRM_HWCOMPOSER_HAL_INTERFACE),aidl)
+ifeq ($(TARGET_DRM_HWCOMPOSER_INSIDE_APEX),true)
+PRODUCT_PACKAGES += \
+    com.android.hardware.graphics.composer.drm_hwcomposer
+else
 PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.drm
+endif
 else ifeq ($(TARGET_DRM_HWCOMPOSER_HAL_INTERFACE),libhardware)
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \

@@ -4,4 +4,4 @@
 on init
     setprop ro.cpuvulkan.version 4206592
     setprop ro.hardware.vulkan pastel
-    setprop ro.vulkan.apex org.lineageos.device.graphics.vulkan.swiftshader
+    setprop ro.vulkan.apex org.lineageos.device.graphics.vulkan

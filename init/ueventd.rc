@@ -1,7 +1,7 @@
 # Graphics
-/dev/dri/card0		0666	system	graphics
-/dev/dri/controlD64	0666	system	graphics
-/dev/dri/renderD128	0666	system	graphics
+/dev/dri/card*		0666	system	graphics
+/dev/dri/controlD*	0666	system	graphics
+/dev/dri/renderD*	0666	system	graphics
 
 # Serial console
 /dev/ttyAMA*	0666	system	system

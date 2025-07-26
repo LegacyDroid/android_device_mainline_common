@@ -1,3 +1,5 @@
+import /vendor/etc/ueventd.${ro.hardware}.rc
+
 # Graphics
 /dev/dri/card*		0666	system	graphics
 /dev/dri/controlD*	0666	system	graphics

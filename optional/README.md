@@ -44,8 +44,24 @@
 | Value | Directory | Description |
 |-------|-----------|-------------|
 | emulated | camera-provider-hal_emulated | Emulated Camera Provider HAL located at `hardware/google/camera/devices/EmulatedCamera` |
-| external | camera-provider-hal_external | https://source.android.com/docs/core/camera/external-usb-cameras |
 | libcamera | camera-provider-hal_libcamera | https://gitlab.baylibre.com/baylibre/ti/android/aosp/external/libcamera https://gitlab.baylibre.com/baylibre/ti/android/aosp/device/ti/am62x |
+
+### TARGET_SUPPORTS_EXTERNAL_CAMERAS
+| Value | Description |
+|-------|-------------|
+| false | Default value, the target does not support external V4L2 cameras |
+| true | The target supports external V4L2 cameras, `TARGET_EXTERNAL_CAMERA_PROVIDER_HAL` will be set to `default-aidl` |
+
+### TARGET_EXTERNAL_CAMERA_PROVIDER_HAL
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| default-aidl | external-camera-provider-hal_default-aidl | https://source.android.com/docs/core/camera/external-usb-cameras |
+
+### TARGET_EXTERNAL_CAMERA_PROVIDER_HAL_USE_EXAMPLE_CONFIG
+| Value | Description |
+|-------|-------------|
+| true | Default value, use the example configuration |
+| false | The target will have to provide `/vendor/etc/external_camera_config.xml` |
 
 ## Graphics
 

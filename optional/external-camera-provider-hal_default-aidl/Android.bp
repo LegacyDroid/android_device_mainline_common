@@ -4,14 +4,14 @@
 //
 
 prebuilt_etc {
-    name: "mainline_common_camera-provider-hal_external_external_camera_config.xml",
+    name: "mainline_common_external-camera-provider-hal_external_camera_config.xml",
     src: "external_camera_config.xml",
     filename_from_src: true,
     vendor: true,
 }
 
 vintf_fragment {
-    name: "manifest_mainline_common_camera-provider-hal_external.xml",
-    src: "manifest_mainline_common_camera-provider-hal_external.xml",
+    name: "manifest_mainline_common_external-camera-provider-hal.xml",
+    src: "manifest_mainline_common_external-camera-provider-hal.xml",
     vendor: true,
 }

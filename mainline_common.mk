@@ -98,4 +98,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi.prebuilt.xml
 
+# Wi-Fi firmware
+PRODUCT_PACKAGES += \
+    wireless-regdb_regulatory.db \
+    wireless-regdb_regulatory.db.p7s
+
 endif # !MAINLINE_COMMON_DISABLE_COMMON_PRODUCT_DEFS

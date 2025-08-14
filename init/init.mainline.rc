@@ -16,6 +16,10 @@ service vendor.dlkm_loader /vendor/bin/dlkm_loader
 on early-init
     start vendor.dlkm_loader
 
+# Firmware loader
+on early-init
+    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+
 # Wi-Fi
 on early-boot
     mkdir /data/vendor/wifi 0770 wifi wifi

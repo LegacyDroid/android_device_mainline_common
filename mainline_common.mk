@@ -128,7 +128,6 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi firmware
 PRODUCT_PACKAGES += \
-    wireless-regdb_regulatory.db \
-    wireless-regdb_regulatory.db.p7s
+    wireless-regdb
 
 endif # !MAINLINE_COMMON_DISABLE_COMMON_PRODUCT_DEFS

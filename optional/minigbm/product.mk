@@ -23,9 +23,6 @@ ifeq ($(TARGET_MINIGBM_HAL_INTERFACE),aidl)
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator-service.minigbm \
     mapper.minigbm
-ifneq ($(TARGET_MINIGBM_PLATFORM),generic)
-$(error minigbm AIDL does not support platforms other than generic yet)
-endif
 else ifeq ($(TARGET_MINIGBM_HAL_INTERFACE),hidl)
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0-service.minigbm$(LOCAL_MINIGBM_MODULE_SUFFIX) \

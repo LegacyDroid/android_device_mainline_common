@@ -5,6 +5,9 @@ import /vendor/etc/ueventd.${ro.hardware}.rc
 /dev/dri/controlD*	0666	system	graphics
 /dev/dri/renderD*	0666	system	graphics
 
+# ION
+/dev/ion	0664	system	system
+
 # Media
 /dev/media*		0660	media	camera
 /dev/v4l-subdev*	0660	media	camera

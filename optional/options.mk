@@ -36,7 +36,7 @@ endif
 # Audio
 TARGET_AUDIO_HAL ?= default-aidl
 
-ifeq ($(TARGET_AUDIO_HAL),default-aidl)
+ifneq ($(filter default-aidl ranchu,$(TARGET_AUDIO_HAL)),)
 TARGET_AUDIO_POLICY ?= cuttlefish
 else
 TARGET_AUDIO_POLICY ?= common-handheld-7.0

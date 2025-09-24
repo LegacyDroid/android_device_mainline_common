@@ -13,7 +13,7 @@ service vendor.dlkm_loader /vendor/bin/dlkm_loader
     disabled
     oneshot
 
-on early-init
+on init
     start vendor.dlkm_loader
 
 # Firmware loader

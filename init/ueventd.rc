@@ -1,3 +1,4 @@
+import /vendor/etc/ueventd.${ro.board.platform}.rc
 import /vendor/etc/ueventd.${ro.hardware}.rc
 
 # Graphics

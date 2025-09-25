@@ -6,6 +6,7 @@
 ifeq ($(TARGET_USB_INIT_SCRIPT),mainline)
 
 PRODUCT_PACKAGES += \
-    init.mainline.usb.rc
+    init.mainline.usb.rc \
+    init.recovery.mainline.usb.rc
 
 endif # TARGET_USB_INIT_SCRIPT

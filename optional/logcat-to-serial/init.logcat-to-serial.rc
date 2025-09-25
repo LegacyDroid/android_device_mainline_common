@@ -1,0 +1,12 @@
+service seriallogging /system/bin/logcat -b all -v threadtime -f /dev/${ro.boot.seriallogging} *:V
+    class main
+    user logd
+    group root logd
+    seclabel u:r:logpersist:s0
+    oneshot
+    disabled
+
+on early-boot && property:ro.boot.seriallogging=*
+    chown system logd /dev/${ro.boot.seriallogging}
+    chmod 0660 /dev/${ro.boot.seriallogging}
+    start seriallogging

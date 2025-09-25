@@ -146,6 +146,13 @@
 | false | Light HAL will not scan for backlight devices. Backlight may be handled by graphics composer HAL instead. |
 | true | Light HAL will scan for backlight devices. Useful if light HAL is supposed to handle backlight and it could not find the backlight device by default. |
 
+## Logging
+
+### TARGET_ENABLE_LOGCAT_TO_SERIAL
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| true | logcat-to-serial | Enable support for printing logcat messages over serial console. Specify the serial console device to use via property `ro.boot.seriallogging` or boot parameter `androidboot.seriallogging`. |
+
 ## Media
 
 ### TARGET_MEDIA_C2_HAL

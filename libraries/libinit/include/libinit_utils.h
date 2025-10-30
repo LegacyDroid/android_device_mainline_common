@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The LineageOS Project
+ * Copyright (C) 2021-2025 The LineageOS Project
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -11,6 +11,6 @@
 
 void property_override(std::string prop, std::string value, bool add = true);
 
-void set_ro_build_prop(const std::string &prop, const std::string &value, bool product = false);
+void set_ro_build_prop(const std::string& prop, const std::string& value, bool product = false);
 
-#endif // LIBINIT_UTILS_H
+#endif  // LIBINIT_UTILS_H

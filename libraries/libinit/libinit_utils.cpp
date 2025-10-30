@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The LineageOS Project
+ * Copyright (C) 2021-2025 The LineageOS Project
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -11,7 +11,7 @@
 #include <libinit_utils.h>
 
 void property_override(std::string prop, std::string value, bool add) {
-    auto pi = (prop_info *) __system_property_find(prop.c_str());
+    auto pi = (prop_info*)__system_property_find(prop.c_str());
     if (pi != nullptr) {
         __system_property_update(pi, value.c_str(), value.length());
     } else if (add) {
@@ -20,20 +20,13 @@ void property_override(std::string prop, std::string value, bool add) {
 }
 
 std::vector<std::string> ro_props_default_source_order = {
-    "odm.",
-    "odm_dlkm.",
-    "product.",
-    "system.",
-    "system_ext.",
-    "vendor.",
-    "vendor_dlkm.",
-    "",
+        "odm.", "odm_dlkm.", "product.", "system.", "system_ext.", "vendor.", "vendor_dlkm.", "",
 };
 
-void set_ro_build_prop(const std::string &prop, const std::string &value, bool product) {
+void set_ro_build_prop(const std::string& prop, const std::string& value, bool product) {
     std::string prop_name;
 
-    for (const auto &source : ro_props_default_source_order) {
+    for (const auto& source : ro_props_default_source_order) {
         if (product)
             prop_name = "ro.product." + source + prop;
         else

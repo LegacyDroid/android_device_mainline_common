@@ -81,16 +81,17 @@ void set_dalvik_heap() {
 
     sysinfo(&sys);
 
-    if (sys.totalram > GB(5))
+    if (sys.totalram > GB(5)) {
         dhi = &dalvik_heap_info_6144;
-    else if (sys.totalram > GB(3))
+    } else if (sys.totalram > GB(3)) {
         dhi = &dalvik_heap_info_4096;
-    else if (sys.totalram > MB(1536))
+    } else if (sys.totalram > MB(1536)) {
         dhi = &dalvik_heap_info_2048;
-    else if (sys.totalram > MB(1280))
+    } else if (sys.totalram > MB(1280)) {
         dhi = &dalvik_heap_info_1024;
-    else
+    } else {
         dhi = &dalvik_heap_info_512;
+    }
 
     property_override(HEAPSTARTSIZE_PROP, dhi->heapstartsize);
     property_override(HEAPGROWTHLIMIT_PROP, dhi->heapgrowthlimit);

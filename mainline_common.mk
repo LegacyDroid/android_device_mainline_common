@@ -87,11 +87,17 @@ PRODUCT_NO_BIONIC_PAGE_SIZE_MACRO := true
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.credentials.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.credentials.xml \
-    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
+    frameworks/native/data/etc/android.software.credentials.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.credentials.xml
 
 PRODUCT_PACKAGES += \
     android.software.ipsec_tunnels.prebuilt.xml
+
+ifneq ($(PRODUCT_IS_ATV),true)
+ifneq ($(PRODUCT_IS_AUTOMOTIVE),true)
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
+endif
+endif
 
 ifeq ($(PRODUCT_IS_GO),true)
 PRODUCT_COPY_FILES += \

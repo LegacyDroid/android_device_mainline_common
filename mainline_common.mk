@@ -99,6 +99,11 @@ PRODUCT_COPY_FILES += \
 endif
 endif
 
+ifeq ($(PRODUCT_IS_AUTOMOTIVE),true)
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/car_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/car_core_hardware.xml
+endif
+
 ifeq ($(PRODUCT_IS_GO),true)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/go_handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/go_handheld_core_hardware.xml

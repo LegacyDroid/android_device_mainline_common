@@ -20,6 +20,9 @@ cc_library_static {
         "libinit_set_properties.cpp",
         "libinit_utils.cpp",
     ],
+    cflags: [
+        "-Wno-c++23-extensions",
+    ],
     whole_static_libs: ["libbase"],
     export_include_dirs: ["include"],
     recovery_available: true,

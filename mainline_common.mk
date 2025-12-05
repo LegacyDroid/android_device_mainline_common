@@ -120,6 +120,7 @@ endif
 
 # Seccomp policy
 PRODUCT_PACKAGES += \
+    mediaextractor.policy.vendor \
     mediaswcodec.policy.vendor
 
 # UFFD GC

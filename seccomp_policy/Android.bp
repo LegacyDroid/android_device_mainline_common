@@ -4,6 +4,14 @@
 //
 
 prebuilt_etc {
+    name: "mediaextractor.policy.vendor",
+    src: "mediaextractor.policy",
+    filename_from_src: true,
+    sub_dir: "seccomp_policy",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "mediaswcodec.policy.vendor",
     src: "mediaswcodec.policy",
     filename_from_src: true,

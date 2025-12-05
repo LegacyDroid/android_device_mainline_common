@@ -9,5 +9,5 @@
 #include <libinit_mainline_common.h>
 
 void vendor_load_properties() {
-    vendor_init_mainline_common();
+    vendor_load_properties_mainline_common();
 }

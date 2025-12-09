@@ -1,4 +1,4 @@
-service seriallogging /system/bin/logcat -b all -v threadtime -f /dev/${ro.boot.seriallogging} *:V
+service seriallogging /system/bin/logcat -b all -v threadtime -f /dev/${ro.vendor.seriallogging} *:V
     class main
     user logd
     group root logd
@@ -6,7 +6,10 @@ service seriallogging /system/bin/logcat -b all -v threadtime -f /dev/${ro.boot.
     oneshot
     disabled
 
-on early-boot && property:ro.boot.seriallogging=*
-    chown system logd /dev/${ro.boot.seriallogging}
-    chmod 0660 /dev/${ro.boot.seriallogging}
+on early-init && property:ro.boot.seriallogging=*
+    setprop ro.vendor.seriallogging ${ro.boot.seriallogging}
+
+on early-boot && property:ro.vendor.seriallogging=*
+    chown system logd /dev/${ro.vendor.seriallogging}
+    chmod 0660 /dev/${ro.vendor.seriallogging}
     start seriallogging

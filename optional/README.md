@@ -166,7 +166,7 @@
 ### TARGET_ENABLE_LOGCAT_TO_SERIAL
 | Value | Directory | Description |
 |-------|-----------|-------------|
-| true | logcat-to-serial | Enable support for printing logcat messages over serial console. Specify the serial console device to use via property `ro.boot.seriallogging` or boot parameter `androidboot.seriallogging`. |
+| true | logcat-to-serial | Enable support for printing logcat messages over serial console. Specify the serial console device to use via property `ro.boot.seriallogging` or property `ro.vendor.seriallogging` or boot parameter `androidboot.seriallogging`. |
 
 ## Media
 

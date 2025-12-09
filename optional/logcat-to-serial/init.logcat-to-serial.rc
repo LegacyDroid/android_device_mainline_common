@@ -1,4 +1,4 @@
-service seriallogging /system/bin/logcat -b ${ro.vendor.seriallogging.logcat_buffer:-all} -v threadtime -f /dev/${ro.vendor.seriallogging} *:V
+service seriallogging /system/bin/logcat -b ${ro.vendor.seriallogging.logcat_buffer:-crash} -v threadtime -f /dev/${ro.vendor.seriallogging} *:V
     class main
     user logd
     group root logd

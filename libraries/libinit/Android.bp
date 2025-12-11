@@ -22,7 +22,11 @@ cc_library_static {
     ],
     cflags: [
         "-Wno-c++23-extensions",
-    ],
+    ] + select(soong_config_variable("mainline_common_libinit", "set_properties_from"), {
+        "devicetree": ["-DSET_PROPERTIES_FROM_DEVICETREE"],
+        "dmi_id": ["-DSET_PROPERTIES_FROM_DMI_ID"],
+        default: [],
+    }),
     whole_static_libs: ["libbase"],
     export_include_dirs: ["include"],
     recovery_available: true,
@@ -32,9 +36,4 @@ cc_library_static {
     name: "init_mainline_common",
     srcs: ["init_mainline_common.cpp"],
     defaults: ["init_mainline_common_defaults"],
-    cflags: select(soong_config_variable("mainline_common_libinit", "set_properties_from"), {
-        "devicetree": ["-DSET_PROPERTIES_FROM_DEVICETREE"],
-        "dmi_id": ["-DSET_PROPERTIES_FROM_DMI_ID"],
-        default: [],
-    }),
 }

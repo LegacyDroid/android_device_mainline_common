@@ -1,0 +1,4 @@
+allow kernel dlkm_loader:key search;
+allow kernel vendor_firmware_file:system firmware_load;
+
+r_dir_file(kernel, vendor_firmware_file)

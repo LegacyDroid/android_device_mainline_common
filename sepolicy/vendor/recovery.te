@@ -18,5 +18,6 @@ recovery_only(`
 
     get_prop(recovery, vendor_recovery_ethernet_dhcp_prop)
 
+    r_dir_file(recovery, sysfs_batteryinfo)
     rw_dir_file(recovery, vendor_sysfs_backlight)
 ')

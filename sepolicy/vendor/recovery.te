@@ -13,6 +13,7 @@ recovery_only(`
     allow recovery sysfs_devices_block:file rw_file_perms;
     allow recovery sysfs_loop:dir r_dir_perms;
     allow recovery sysfs_loop:file rw_file_perms;
+    allow recovery vendor_sysfs_backlight:file w_file_perms;
 
     allowxperm recovery rootfs:dir ioctl { 0x204 BLKGETSIZE 0x1272 };
 
@@ -20,5 +21,5 @@ recovery_only(`
 
     r_dir_file(recovery, sysfs_batteryinfo)
     r_dir_file(recovery, sysfs_fs_f2fs)
-    rw_dir_file(recovery, vendor_sysfs_backlight)
+    r_dir_file(recovery, vendor_sysfs_backlight)
 ')

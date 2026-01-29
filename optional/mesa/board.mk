@@ -18,12 +18,7 @@ ifeq ($(shell expr $(MESA_VERSION_MAJOR) \>= 25), 1)
 BOARD_MESA3D_MESON_ARGS := -Dmesa-clc=system
 endif
 
-ifneq ($(wildcard external/llvm-project/Android.bp),)
-BUILD_BROKEN_PLUGIN_VALIDATION += \
-    soong-llvm12 \
-    soong-llvm17 \
-    soong-llvm18 \
-    soong-llvm19
+ifeq ($(TARGET_MESA_ENABLE_SOFTWARE_RENDERER),true)
 BOARD_MESA3D_GALLIUM_DRIVERS += llvmpipe softpipe
 BOARD_MESA3D_VULKAN_DRIVERS += swrast
 endif

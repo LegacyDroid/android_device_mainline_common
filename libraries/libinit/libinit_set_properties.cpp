@@ -17,7 +17,7 @@ static const std::string kDmiIdPath = "/sys/devices/virtual/dmi/id/";
 static const std::string kDeviceTreePath = "/sys/firmware/devicetree/base/";
 
 static const std::unordered_map<std::string, std::string> kDmiIdToPropertyMap = {
-        {"bios_version", "ro.boot.bootloader"},
+        {"bios_version", "ro.bootloader"},
         {"product_serial", "ro.serialno"},
 };
 

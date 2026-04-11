@@ -15,8 +15,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libeffects/data/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
 
+ifneq ($(TARGET_TINYHAL_DO_NOT_SET_AS_DEFAULT),true)
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.audio.primary=tinyhal
+endif
 
 PRODUCT_SOONG_NAMESPACES += \
     external/tinyhal

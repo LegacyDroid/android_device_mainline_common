@@ -132,8 +132,8 @@ on early-boot
 
 on boot
     write /config/usb_gadget/g1/bcdDevice 0x0510
-    # Use USB Gadget HAL
-    setprop sys.usb.configfs 2
+    # Use USB Gadget HAL by default
+    setprop sys.usb.configfs ${vendor.usb.configfs:-2}
 
 on property:sys.usb.config=none && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/os_desc/use 0

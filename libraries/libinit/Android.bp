@@ -26,6 +26,9 @@ cc_library_static {
         "devicetree": ["-DSET_PROPERTIES_FROM_DEVICETREE"],
         "dmi_id": ["-DSET_PROPERTIES_FROM_DMI_ID"],
         default: [],
+    }) + select(soong_config_variable("mainline_common_libinit", "set_dalvik_heap"), {
+        false: [],
+        default: ["-DSET_DALVIK_HEAP"],
     }),
     whole_static_libs: ["libbase"],
     export_include_dirs: ["include"],

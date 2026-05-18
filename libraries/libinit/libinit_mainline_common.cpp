@@ -24,7 +24,10 @@ void vendor_load_properties_mainline_common(void) {
 
     enable_memfd_if_ashmem_is_absent();
 
+#ifdef SET_DALVIK_HEAP
     set_dalvik_heap();
+#endif
+
 #ifdef SET_PROPERTIES_FROM_DEVICETREE
     set_properties_from_devicetree();
 #elifdef SET_PROPERTIES_FROM_DMI_ID

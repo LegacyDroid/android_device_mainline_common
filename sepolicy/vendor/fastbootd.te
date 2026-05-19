@@ -9,4 +9,5 @@ recovery_only(`
     allow fastbootd vd_device:blk_file rw_file_perms;
 
     allowxperm fastbootd metadata_block_device:blk_file ioctl { BLKDISCARDZEROES BLKROGET };
+    allowxperm fastbootd system_block_device:blk_file ioctl { BLKDISCARD BLKSECDISCARD };
 ')

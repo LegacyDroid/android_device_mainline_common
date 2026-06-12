@@ -23,6 +23,10 @@ cc_library_static {
     cflags: [
         "-Wno-c++23-extensions",
     ] + select(soong_config_variable("mainline_common_libinit", "set_properties_from"), {
+        "both": [
+            "-DSET_PROPERTIES_FROM_DEVICETREE",
+            "-DSET_PROPERTIES_FROM_DMI_ID",
+        ],
         "devicetree": ["-DSET_PROPERTIES_FROM_DEVICETREE"],
         "dmi_id": ["-DSET_PROPERTIES_FROM_DMI_ID"],
         default: [],

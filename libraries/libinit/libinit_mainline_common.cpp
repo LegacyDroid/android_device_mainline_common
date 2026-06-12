@@ -26,9 +26,11 @@ void vendor_load_properties_mainline_common(void) {
     set_dalvik_heap();
 #endif
 
+    // Not ordered alphabetically, ordered by accuracy from low to high
+#ifdef SET_PROPERTIES_FROM_DMI_ID
+    set_properties_from_dmi_id();
+#endif
 #ifdef SET_PROPERTIES_FROM_DEVICETREE
     set_properties_from_devicetree();
-#elifdef SET_PROPERTIES_FROM_DMI_ID
-    set_properties_from_dmi_id();
 #endif
 }

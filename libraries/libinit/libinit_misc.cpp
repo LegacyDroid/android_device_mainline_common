@@ -13,10 +13,12 @@
 
 void enable_insecure_debugging(void) {
     const std::unordered_map<std::string, std::string> kPropsToSet = {
+            {"persist.sys.usb.config", "adb"},
             {"ro.adb.secure", "0"},
             {"ro.boot.verifiedbootstate", "orange"},
             {"ro.debuggable", "1"},
             {"ro.secure", "0"},
+            {"sys.usb.config", "adb"},
     };
 
     for (const auto& [key, value] : kPropsToSet) {

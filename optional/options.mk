@@ -118,7 +118,7 @@ endif
 
 # Vibrator
 ifneq ($(TARGET_HAS_VIBRATOR),false)
-TARGET_VIBRATOR_HAL ?= glodroid
+TARGET_VIBRATOR_HAL ?= mainline
 endif
 
 # Wi-Fi

@@ -267,6 +267,7 @@
 | Value | Directory | Description |
 |-------|-----------|-------------|
 | glodroid | vibrator-hal_glodroid | Supports generic FF class vibrator devices |
+| mainline | vibrator-hal_glodroid | Supports generic FF class vibrator devices, and is more properly implemented |
 
 ## Wi-Fi
 

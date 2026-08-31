@@ -4,7 +4,7 @@
 #
 
 ifeq ($(TARGET_USB_HAL),lineage-basic)
-PRODUCT_PACKAGES += android.hardware.usb@1.3-service.basic
+PRODUCT_PACKAGES += android.hardware.usb-service.basic
 else ifeq ($(TARGET_USB_HAL),lineage-dual_role_usb)
 PRODUCT_PACKAGES += android.hardware.usb@1.3-service.dual_role_usb
 else ifeq ($(TARGET_USB_HAL),lineage-typec)

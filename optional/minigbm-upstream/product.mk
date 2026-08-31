@@ -24,7 +24,7 @@ endif
 TARGET_MINIGBM_UPSTREAM_INSIDE_APEX ?= true
 ifeq ($(TARGET_MINIGBM_UPSTREAM_INSIDE_APEX),true)
 PRODUCT_PACKAGES += \
-    org.lineageos.hardware.gralloc.minigbm_upstream
+    com.android.hardware.graphics.allocator.minigbm_upstream
 $(call soong_config_set,minigbm_upstream,RELEASE_SM_OPEN_DECLARED_PASSTHROUGH_HAL,$(RELEASE_SM_OPEN_DECLARED_PASSTHROUGH_HAL))
 endif
 

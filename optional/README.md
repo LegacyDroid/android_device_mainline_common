@@ -115,6 +115,11 @@
 |-------|-----------|-------------|
 | default-aidl | memtrack-hal_default-aidl | |
 
+### TARGET_USES_FRAMEBUFFER_DISPLAY
+| Value | Directory | Description |
+|-------|-----------|-------------|
+| true | graphics-hals_fb | Enables Framebuffer Graphics AIDL HALs. |
+
 ## Health
 
 ### TARGET_HEALTH_HAL

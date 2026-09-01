@@ -1,6 +1,9 @@
 import /vendor/etc/ueventd.${ro.board.platform}.rc
 import /vendor/etc/ueventd.${ro.hardware}.rc
 
+# DMA heaps
+/dev/dma_heap/system	0666	system	graphics
+
 # Graphics
 /dev/dri/card*		0666	system	graphics
 /dev/dri/controlD*	0666	system	graphics

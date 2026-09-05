@@ -3,8 +3,9 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-vintf_fragment {
+prebuilt_etc {
     name: "manifest_mainline_common_gbm_gralloc.xml",
     src: "manifest_mainline_common_gbm_gralloc.xml",
+    sub_dir: "vintf/manifest",
     vendor: true,
 }
